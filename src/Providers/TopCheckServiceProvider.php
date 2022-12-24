@@ -3,6 +3,7 @@
 namespace Potatoquality\TopCheck\Providers;
 use Potatoquality\TopCheck\Commands\RunTopCheck;
 use Illuminate\Support\ServiceProvider;
+use Potatoquality\TopCheck\Commands\SaveTopCheck;
 
 class TopCheckServiceProvider extends ServiceProvider
 {
@@ -28,6 +29,7 @@ class TopCheckServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 RunTopCheck::class,
+                SaveTopCheck::class,
             ]);
         }
     }

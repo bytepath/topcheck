@@ -106,10 +106,15 @@ class Memory
      */
     public function toArray(): array
     {
-        return [
+        $retval = [
             "unit" => $this->getUnit(),
             "type" => $this->getType(),
-            ...$this->data,
         ];
+
+        foreach ($this->data as $key => $val) {
+            $retval[$key] = $val;
+        }
+
+        return $retval;
     }
 }

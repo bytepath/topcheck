@@ -1,0 +1,13 @@
+{
+    "name": "potatoquality/topcheck",
+    "description": "A tool to monitor server performance",
+    "type": "library",
+    "require": {
+        "orchestra/testbench": "^7.17"
+    },
+    "autoload": {
+        "psr-4": {
+            "Potatoquality\\Topcheck\\": "/"
+        }
+    }
+}

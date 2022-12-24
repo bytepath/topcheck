@@ -2,6 +2,7 @@
 
 namespace Potatoquality\TopCheck\Commands;
 
+use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
 use Potatoquality\TopCheck\Repositories\SystemPerformanceInfoRepository;
 use Potatoquality\TopCheck\TopCheck;
 use Illuminate\Console\Command;
@@ -41,7 +42,7 @@ class RunTopCheck extends Command
         return null;
     }
 
-    protected function displayData($data)
+    protected function displayData(SystemPerformanceInfo $data)
     {
         // Display the average load
         $load = $data->getAverageLoad();
@@ -53,19 +54,29 @@ class RunTopCheck extends Command
         ]);
 
         // Display CPU info
-        $coreList = [];
+        $table = [];
         foreach($data->getCPUCores() as $core) {
-            array_push($coreList, [$core->getName(), $core->getTotalUsage()]);
+            array_push($table, [$core->getName(), $core->getTotalUsage()]);
         }
         $this->line("CPU Cores");
-        $this->table(["Core", "Load %"], $coreList);
+        $this->table(["Core", "Load %"], $table);
 
-        // Display Memory
+        // Display Physical Memory
+        $table = [];
+        $memory = $data->getPhysicalMemory();
+        foreach($memory->toArray() as $key => $val) {
+            array_push($table, [$key, $val]);
+        }
         $this->line("Physical Memory");
-        $this->table(["", ""], $data->getPhysicalMemory()->toArray());
+        $this->table(["", $memory->getUnit()], $table);
 
         // Display Virtual Memory
+        $table = [];
+        $memory = $data->getVirtualMemory();
+        foreach($memory->toArray() as $key => $val) {
+            array_push($table, [$key, $val]);
+        }
         $this->line("Virtual Memory");
-        $this->table(["", ""], $data->getVirtualMemory()->toArray());
+        $this->table(["", $memory->getUnit()], $table);
     }
 }

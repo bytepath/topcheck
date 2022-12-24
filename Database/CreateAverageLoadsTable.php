@@ -1,8 +1,8 @@
 <?php
 
-namespace Domain\TopCheck\Database;
+namespace Potatoquality\TopCheck\Database;
 
-use Domain\TopCheck\AbstractClasses\CreateDatabaseTable;
+use Potatoquality\TopCheck\AbstractClasses\CreateDatabaseTable;
 use Illuminate\Database\Schema\Blueprint;
 
 class CreateAverageLoadsTable extends CreateDatabaseTable

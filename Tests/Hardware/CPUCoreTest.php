@@ -1,8 +1,8 @@
 <?php
 
-namespace Domain\TopCheck\Tests\Hardware;
+namespace Potatoquality\TopCheck\Tests\Hardware;
 
-use Domain\TopCheck\Hardware\CPUCore;
+use Potatoquality\TopCheck\Hardware\CPUCore;
 use Tests\TestCase;
 
 class CPUCoreTest extends TestCase

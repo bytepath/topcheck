@@ -1,9 +1,9 @@
 <?php
 
-namespace Domain\TopCheck;
+namespace Potatoquality\TopCheck;
 
-use Domain\TopCheck\Interfaces\TopCommandInterface;
-use Domain\TopCheck\ShellCommands\LinuxTopCommand;
+use Potatoquality\TopCheck\Interfaces\TopCommandInterface;
+use Potatoquality\TopCheck\ShellCommands\LinuxTopCommand;
 
 class TopCheck
 {

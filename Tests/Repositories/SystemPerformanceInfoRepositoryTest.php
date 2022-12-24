@@ -1,10 +1,10 @@
 <?php
 
-namespace Domain\TopCheck\Tests\Repositories;
+namespace Potatoquality\TopCheck\Tests\Repositories;
 
-use Domain\TopCheck\Containers\SystemPerformanceInfo;
-use Domain\TopCheck\Repositories\SystemPerformanceInfoRepository;
-use Domain\TopCheck\Tests\FakeTopResult;
+use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
+use Potatoquality\TopCheck\Repositories\SystemPerformanceInfoRepository;
+use Potatoquality\TopCheck\Tests\FakeTopResult;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\DB;
 use Tests\TestCase;

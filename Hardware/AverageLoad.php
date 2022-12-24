@@ -1,8 +1,8 @@
 <?php
 
-namespace Domain\TopCheck\Hardware;
+namespace Potatoquality\TopCheck\Hardware;
 
-use Domain\TopCheck\Exceptions\AverageLoadException;
+use Potatoquality\TopCheck\Exceptions\AverageLoadException;
 
 /**
  * Represents the "Average Load" of the system

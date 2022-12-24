@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\TopCheck\Tests;
+namespace Potatoquality\TopCheck\Tests;
 
 class FakeTopResult
 {

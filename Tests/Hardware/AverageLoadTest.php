@@ -1,10 +1,10 @@
 <?php
 
-namespace Domain\TopCheck\Tests\Hardware;
+namespace Potatoquality\TopCheck\Tests\Hardware;
 
-use Domain\TopCheck\Exceptions\AverageLoadException;
-use Domain\TopCheck\Hardware\AverageLoad;
-use Domain\TopCheck\Hardware\CPUCore;
+use Potatoquality\TopCheck\Exceptions\AverageLoadException;
+use Potatoquality\TopCheck\Hardware\AverageLoad;
+use Potatoquality\TopCheck\Hardware\CPUCore;
 use Tests\TestCase;
 
 class AverageLoadTest extends TestCase

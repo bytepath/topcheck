@@ -1,10 +1,10 @@
 <?php
 
-namespace Domain\TopCheck\Tests\Hardware;
+namespace Potatoquality\TopCheck\Tests\Hardware;
 
-use Domain\TopCheck\Hardware\CPUCore;
-use Domain\TopCheck\Hardware\Memory;
-use Domain\TopCheck\Hardware\PhysicalMemory;
+use Potatoquality\TopCheck\Hardware\CPUCore;
+use Potatoquality\TopCheck\Hardware\Memory;
+use Potatoquality\TopCheck\Hardware\PhysicalMemory;
 use Tests\TestCase;
 
 class MemoryTest extends TestCase

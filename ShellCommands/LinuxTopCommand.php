@@ -1,9 +1,9 @@
 <?php
 
-namespace Domain\TopCheck\ShellCommands;
+namespace Potatoquality\TopCheck\ShellCommands;
 
-use Domain\TopCheck\Containers\SystemPerformanceInfo;
-use Domain\TopCheck\Interfaces\TopCommandInterface;
+use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
+use Potatoquality\TopCheck\Interfaces\TopCommandInterface;
 
 /**
  * A script that uses the linux top command to pull the current performance info for this server.

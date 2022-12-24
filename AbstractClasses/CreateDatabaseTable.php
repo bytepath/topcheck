@@ -1,5 +1,5 @@
 <?php
-namespace Domain\TopCheck\AbstractClasses;
+namespace Potatoquality\TopCheck\AbstractClasses;
 
 use Illuminate\Database\Schema\Blueprint;
 use \Exception;

@@ -1,7 +1,7 @@
 <?php
 
-namespace Domain\TopCheck\Providers;
-use Domain\TopCheck\Commands\RunTopCheck;
+namespace Potatoquality\TopCheck\Providers;
+use Potatoquality\TopCheck\Commands\RunTopCheck;
 use Illuminate\Support\ServiceProvider;
 
 class TopCheckServiceProvider extends ServiceProvider

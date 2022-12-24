@@ -3,9 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Domain\TopCheck\Database\CreateAverageLoadsTable;
-use Domain\TopCheck\Database\CreateCpuCoresTable;
-use Domain\TopCheck\Database\CreateMemoryTable;
+use Potatoquality\TopCheck\Database\CreateAverageLoadsTable;
+use Potatoquality\TopCheck\Database\CreateCpuCoresTable;
+use Potatoquality\TopCheck\Database\CreateMemoryTable;
 
 return new class extends Migration
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Domain\TopCheck\Interfaces;
+namespace Potatoquality\TopCheck\Interfaces;
 
-use Domain\TopCheck\Containers\SystemPerformanceInfo;
+use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
 
 /**
  * Defines a class that uses the top command to get the current performance information of the system.

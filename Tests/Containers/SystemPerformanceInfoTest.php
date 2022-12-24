@@ -1,15 +1,15 @@
 <?php
 
-namespace Domain\TopCheck\Tests\Containers;
+namespace Potatoquality\TopCheck\Tests\Containers;
 
-use Domain\TopCheck\Containers\SystemPerformanceInfo;
-use Domain\TopCheck\Exceptions\EmptyRepositoryException;
-use Domain\TopCheck\Hardware\AverageLoad;
-use Domain\TopCheck\Hardware\CPUCore;
-use Domain\TopCheck\Hardware\Memory;
-use Domain\TopCheck\Hardware\PhysicalMemory;
-use Domain\TopCheck\Repositories\SystemPerformanceInfoRepository;
-use Domain\TopCheck\Tests\FakeTopResult;
+use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
+use Potatoquality\TopCheck\Exceptions\EmptyRepositoryException;
+use Potatoquality\TopCheck\Hardware\AverageLoad;
+use Potatoquality\TopCheck\Hardware\CPUCore;
+use Potatoquality\TopCheck\Hardware\Memory;
+use Potatoquality\TopCheck\Hardware\PhysicalMemory;
+use Potatoquality\TopCheck\Repositories\SystemPerformanceInfoRepository;
+use Potatoquality\TopCheck\Tests\FakeTopResult;
 use Tests\TestCase;
 use Mockery;
 

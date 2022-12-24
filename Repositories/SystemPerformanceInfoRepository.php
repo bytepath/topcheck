@@ -1,9 +1,9 @@
 <?php
 
-namespace Domain\TopCheck\Repositories;
+namespace Potatoquality\TopCheck\Repositories;
 
 use Carbon\Carbon;
-use Domain\TopCheck\Containers\SystemPerformanceInfo;
+use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
 use Illuminate\Support\Facades\DB;
 
 class SystemPerformanceInfoRepository

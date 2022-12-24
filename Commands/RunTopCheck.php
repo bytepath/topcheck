@@ -1,9 +1,9 @@
 <?php
 
-namespace Domain\TopCheck\Commands;
+namespace Potatoquality\TopCheck\Commands;
 
-use Domain\TopCheck\Repositories\SystemPerformanceInfoRepository;
-use Domain\TopCheck\TopCheck;
+use Potatoquality\TopCheck\Repositories\SystemPerformanceInfoRepository;
+use Potatoquality\TopCheck\TopCheck;
 use Illuminate\Console\Command;
 
 class RunTopCheck extends Command

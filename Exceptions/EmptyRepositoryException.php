@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\TopCheck\Exceptions;
+namespace Potatoquality\TopCheck\Exceptions;
 
 class EmptyRepositoryException
 {

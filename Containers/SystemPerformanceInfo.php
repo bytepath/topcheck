@@ -1,10 +1,10 @@
 <?php
 
-namespace Domain\TopCheck\Containers;
+namespace Potatoquality\TopCheck\Containers;
 
-use Domain\TopCheck\Hardware\AverageLoad;
-use Domain\TopCheck\Hardware\CPUCore;
-use Domain\TopCheck\Hardware\Memory;
+use Potatoquality\TopCheck\Hardware\AverageLoad;
+use Potatoquality\TopCheck\Hardware\CPUCore;
+use Potatoquality\TopCheck\Hardware\Memory;
 /**
  * An object that contains the current performance information for this system including per core CPU and memory data
  *

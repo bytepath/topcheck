@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\TopCheck\Hardware;
+namespace Potatoquality\TopCheck\Hardware;
 
 /**
  * Represents the memory of the system

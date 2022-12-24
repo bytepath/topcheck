@@ -1,6 +1,7 @@
 {
     "name": "potatoquality/topcheck",
     "description": "A tool to monitor server performance",
+    "license": "LGPL-2.1-or-later",
     "type": "library",
     "require": {
         "orchestra/testbench": "^7.17"

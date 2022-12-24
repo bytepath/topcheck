@@ -11,11 +11,16 @@ class SystemPerformanceInfoRepository
     public function save(SystemPerformanceInfo $info): bool
     {
         $timestamps = function($arr) {
-            return [
+            $retval = [
                 "created_at" => Carbon::now(),
                 "updated_at" => Carbon::now(),
-                ...$arr,
             ];
+
+            foreach ($arr as $key => $val) {
+                $retval[$key] = $val;
+            }
+
+            return $retval;
         };
 
         $arr = $info->toArray();

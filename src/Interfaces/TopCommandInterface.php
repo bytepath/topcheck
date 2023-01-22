@@ -14,4 +14,10 @@ interface TopCommandInterface
      * @return SystemPerformanceInfo
      */
     public function run(): SystemPerformanceInfo;
+
+    /**
+     * Returns raw performance info without converting to SystemPerformanceInfo class
+     * @return array
+     */
+    public function raw(): array;
 }

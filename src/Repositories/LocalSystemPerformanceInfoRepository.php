@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
 use Illuminate\Support\Facades\DB;
 
-class SystemPerformanceInfoRepository
+class LocalSystemPerformanceInfoRepository
 {
     public function save(SystemPerformanceInfo $info): bool
     {

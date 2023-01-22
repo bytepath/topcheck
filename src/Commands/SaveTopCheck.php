@@ -2,6 +2,8 @@
 
 namespace Potatoquality\TopCheck\Commands;
 
+use Potatoquality\TopCheck\Factories\PersistPerformanceInfoFactory;
+use Potatoquality\TopCheck\Repositories\CloudSysPerfInfoRepository;
 use Potatoquality\TopCheck\Repositories\SystemPerformanceInfoRepository;
 
 class SaveTopCheck extends RunTopCheck
@@ -26,6 +28,12 @@ class SaveTopCheck extends RunTopCheck
      */
     public function getRepo()
     {
-        return new SystemPerformanceInfoRepository();
+        $config = config("topcheck");
+        $client = $config["topcheck_client"];
+        $secret = $config["topcheck_secret"];
+        $driver = $config["topcheck_driver"];
+        $url = $config["topcheck_url"];
+
+        return PersistPerformanceInfoFactory::forDriver($driver, $client, $secret, $url);
     }
 }

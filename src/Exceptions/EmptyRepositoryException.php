@@ -2,7 +2,9 @@
 
 namespace Potatoquality\TopCheck\Exceptions;
 
-class EmptyRepositoryException
+use \Exception;
+
+class EmptyRepositoryException extends Exception
 {
     public static function forSystemInfo($info)
     {

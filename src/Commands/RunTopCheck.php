@@ -3,7 +3,11 @@
 namespace Potatoquality\TopCheck\Commands;
 
 use Potatoquality\TopCheck\Containers\SystemPerformanceInfo;
+use Potatoquality\TopCheck\Factories\CommandFactory;
+use Potatoquality\TopCheck\Interfaces\TopCommandInterface;
 use Potatoquality\TopCheck\Repositories\SystemPerformanceInfoRepository;
+use Potatoquality\TopCheck\ShellCommands\FakeTopCommand;
+use Potatoquality\TopCheck\ShellCommands\LinuxTopCommand;
 use Potatoquality\TopCheck\TopCheck;
 use Illuminate\Console\Command;
 
@@ -30,7 +34,11 @@ class RunTopCheck extends Command
      */
     public function handle()
     {
-        $this->displayData((new TopCheck($this->getRepo()))->run());
+        $repo = $this->getRepo();
+        $command = $this->getCommand();
+        $this->displayData((new TopCheck($repo, $command))->run());
+
+        return 1;
     }
 
     /**
@@ -40,6 +48,16 @@ class RunTopCheck extends Command
     protected function getRepo()
     {
         return null;
+    }
+
+    /**
+     * Fetches the Top command for your current operating system
+     * @param string $currentOS the result of php_uname('s')
+     * @return TopCommandInterface
+     */
+    public function getCommand(): TopCommandInterface
+    {
+        return CommandFactory::forOperatingSystem(php_uname('s'));
     }
 
     protected function displayData(SystemPerformanceInfo $data)

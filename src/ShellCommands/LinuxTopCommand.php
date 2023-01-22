@@ -13,6 +13,15 @@ class LinuxTopCommand implements TopCommandInterface
 {
     public function run(): SystemPerformanceInfo
     {
+        return new SystemPerformanceInfo($this->raw());
+    }
+
+    /**
+     * Returns raw performance data as an array
+     * @return array
+     */
+    public function raw(): array
+    {
         $retval = [];
 
         $topCMD = 'top -bn1 -1 | head -n 6 | sed \'s/used\./used,/g\' | sed \'s/-/:/g\' | sed \'s/%//g\'  | awk -F\'[/:?,?/]\' \'{ if ($1 ~ /Cpu[0-9]/ ) print $1 "@" $2 "@" $3 "@" $4 "@" $5 "@" $6 "@" $7 "@" $8 "@" $9 "###" } { if ($1 ~ /MiB.*/ ) print $1 "@" $2 "@" $3 "@" $4 "@" $5 "###" } { if ($1 ~ /top.*/ ) print $1 "@" $9 "@" $10 "@" $11 "###" } \'';
@@ -57,6 +66,6 @@ class LinuxTopCommand implements TopCommandInterface
             }
         }
 
-        return new SystemPerformanceInfo($retval);
+        return $retval;
     }
 }

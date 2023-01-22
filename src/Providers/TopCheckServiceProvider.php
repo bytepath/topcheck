@@ -26,6 +26,10 @@ class TopCheckServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__.'/../Migrations');
 
+        $this->publishes([
+            __DIR__ . "/../Publish/Config/topcheck.php" => config_path("topcheck.php"),
+        ]);
+
         if ($this->app->runningInConsole()) {
             $this->commands([
                 RunTopCheck::class,

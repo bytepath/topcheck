@@ -47,6 +47,14 @@ class CloudSystemPerformanceInfoRepository
         $authToken = $this->fetchAuthToken();
         $arr = $info->toArray();
 
+        $response = $this->client->post("/api/v1/performance/snapshot", [
+            "headers" => [
+                "Accept" => "application/json",
+                "Authorization" => "Bearer " . $authToken->getToken(),
+            ],
+            "form_params" => $arr,
+        ]);
+
         return true;
     }
 
